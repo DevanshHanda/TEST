@@ -1,0 +1,302 @@
+/* Reset and Font Import */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Bebas Neue', sans-serif;
+  background: #0e0e0e;
+  color: #fff;
+  line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.logo {
+  font-size: 36px;
+  letter-spacing: 3px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links li {
+  margin-left: 20px;
+  position: relative; /* For dropdown positioning */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f0a500;
+}
+
+/* Dropdown Menu Styling */
+.nav-links .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.9);
+  min-width: 250px;
+  right: 0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-toggle:hover + .dropdown-content,
+.dropdown-content:hover {
+  display: block; /* Show dropdown on hover */
+}
+
+/* Input Fields and Buttons in Dropdown */
+.dropdown-content input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+}
+
+.dropdown-content button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f0a500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+.dropdown-content button:hover {
+  background-color: #d18d00;
+}
+
+/* Header Section */
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('hero-background.jpg') no-repeat center center/cover;
+  animation: zoomMove 50s ease-in-out infinite;
+  transform-origin: bottom center;
+  z-index: 0;
+}
+
+header > * {
+  position: relative;
+  z-index: 1;
+}
+
+.header-content {
+  text-align: center;
+}
+
+.header-content h1 {
+  font-size: 80px;
+  text-transform: uppercase;
+}
+
+.header-content p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #f0a500;
+  color: #fff;
+  padding: 10px 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 50px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #d18d00;
+}
+
+/* About Section */
+.about {
+  padding: 50px;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 20px;
+  line-height: 1.8;
+}
+
+/* Projects Section */
+.projects {
+  position: relative;
+  padding: 50px;
+  background-color: #333;
+}
+
+.projects h2 {
+  text-align: center;
+  font-size: 48px;
+  margin-bottom: 40px;
+}
+
+.project-card {
+  text-align: center;
+  margin: 20px;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+}
+
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Background Animation for Projects */
+.background-animation {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+}
+
+.shape {
+  position: absolute;
+  background: rgba(240, 165, 0, 0.6);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+}
+
+.shape:nth-child(1) {
+  width: 100px;
+  height: 100px;
+  top: 10%;
+  left: 10%;
+}
+
+.shape:nth-child(2) {
+  width: 150px;
+  height: 150px;
+  top: 20%;
+  left: 20%;
+  animation-delay: 2s;
+}
+
+.shape:nth-child(3) {
+  width: 200px;
+  height: 200px;
+  top: 70%;
+  left: 70%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50px, -50px);
+  }
+}
+
+/* Assigned Tasks Section */
+.assigned-tasks {
+  padding: 30px;
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.assigned-tasks h2 {
+  font-size: 32px;
+  color: #f0a500;
+}
+
+.assigned-tasks ul {
+  list-style: none;
+  padding: 0;
+}
+
+.assigned-tasks li {
+  background-color: #444;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.assigned-tasks li:hover {
+  background-color: #555;
+}
+
+/* Contact Section */
+.contact {
+  padding: 50px;
+  background-color: #1e1e1e;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 30px;
+}
+
+.contact p {
+  font-size: 24px;
+}
+
+.contact .btn {
+  margin-top: 20px;
+}
